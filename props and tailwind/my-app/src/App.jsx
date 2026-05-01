@@ -1,38 +1,30 @@
 import "./App.css";
+import Card from "./components/Card";
 
 function App() {
+  // props makes a component reuseable. Once a card has been made, the card should be wrapped in a component and can be used again and again. Place its html, css, js in one component
+  // React says don't segregate things technically, segregate things functionally
+
+  // let myObj = {
+  //   username: 'azeem',
+  //   email: 'azeem@gmail.com',
+  //   password: 'azeem123',
+  // }
+  // let myArr = [1, 2, 3, 4];
   return (
     <>
       <h1 className="bg-red-600 text-white p-4 rounded-xl">Tailwind CSS</h1>
-      <div className="max-w-xs rounded-md shadow-md bg-black text-gray-100">
-      <img
-        src="https://picsum.photos/301"
-        alt=""
-        className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500"
-      />
-      <div className="flex flex-col justify-between p-6 space-y-8">
-        <div className="space-y-2">
-          <h2 className="text-3xl font-semibold tracking-wide">Lorem</h2>
-          <p className="text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-            tempora ipsum soluta amet corporis accusantium aliquid consectetur
-            eaque!
-          </p>
-        </div>
-        <button
-          type="button"
-          className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-gray-800 text-gray-200"
-        >
-          Read more
-        </button>
+      <div className="flex gap-10">
+        <Card username='Azeem' btnText='click me' />
+        {/* <Card someObj={myObj}/>
+        <Card someArr={myArr}/> */}
+        <Card username='Omar' btnText='visit me' />
+        <Card username='Shariq' btnText='hover me' />
       </div>
-    </div>
     </>
   );
 }
 
 export default App;
 
-// className is a reserved keyword
-// in jsx, every tag is a closing tag
-// close the img tag
+// <Card someObj=myObj myArr=[1, 2, 3] myObj/>  // not allowed, must be passed in a variable
