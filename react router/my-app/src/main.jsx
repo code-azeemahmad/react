@@ -44,6 +44,7 @@ const router = createBrowserRouter(
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
       <Route path='github' element={<Github />} />
+      <Route path='user/:id' element={<User />} />
     </Route>
   )
 );
@@ -55,3 +56,5 @@ createRoot(document.getElementById('root')).render(
 )
 
 // RouterProvider requires a prop
+// :id = dynamic value coming from URL
+// taking parameters from url first takes place here, <Route path='user/:id' element={<User />} />, dynamic route
