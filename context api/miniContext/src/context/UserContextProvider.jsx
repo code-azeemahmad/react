@@ -19,4 +19,9 @@ export default UserContextProvider;
    Step 2: Provide Context
    Step 3: Consume Context */
 
-// how to access context
+
+/* Context = global box
+   value={{user, setUser}}
+Inside the box:
+- user → current value
+- setUser → function to change it */
