@@ -1,12 +1,17 @@
-import React, {useState, useContext} from 'react';
+// how to send data to Profile
+import {useState, useContext} from 'react';
 import UserContext from '../context/UserContext';
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
+    // how to fetch values in userContext
+    const {setUser} = useContext(UserContext)
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(username, password)
+        setUser({username, password});
     }
   return (
     // control the values
