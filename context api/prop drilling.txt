@@ -1,0 +1,2 @@
+ Prop drilling is the process of passing data from a parent component down to a deeply nested child component through multiple intermediate components that do not actually use the data themselves. These intermediate components serve merely as "messengers" to deliver the props further down the tree
+ Solution: context API, Redux Toolkit(RTK)
