@@ -1,4 +1,5 @@
-import { useState } from "react";
+/* eslint-disable react-hooks/set-state-in-effect */
+import { useEffect, useState } from "react";
 import "./App.css";
 import { TodoProvider } from "./context";
 useState;
@@ -28,6 +29,19 @@ function App() {
     // Object syntax must be key: value. Not !prevTodo.completed, this is just a key
     setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? {...prevTodo, completed: !prevTodo.completed} : prevTodo)));
   };
+
+  // when app loads for the first time, which method queries local storage to extract values and insert in todos
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem('todos')); // return value in string, but we need in json
+    if (todos && todos.length > 0) {
+      setTodos(todos);
+    }
+  }, []);
+
+  // add todos in local storage
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos)); // state
+  }, [todos])
 
   return (
     <TodoProvider
