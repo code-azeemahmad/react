@@ -4,6 +4,7 @@ import { createContext, useContext } from "react";
 export const TodoContext = createContext({
     // takes values from here in every component
     todos: [
+        // each item is a single todo
         {
             id: 1, 
             todo: 'todo message',
