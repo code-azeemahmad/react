@@ -4,7 +4,7 @@ import { createContext, useContext } from "react";
 export const TodoContext = createContext({
     // takes values from here in every component
     todos: [
-        // each item is a single todo
+        // each item is a single todo, loop through each item
         {
             id: 1, 
             todo: 'todo message',
