@@ -26,3 +26,5 @@ useDispatch - send a value in store
 Steps to configure RTK
 --> configureStore()
 --> createReducer()
+--> useDispatch()
+--> useSelector()
