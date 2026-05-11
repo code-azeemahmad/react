@@ -21,3 +21,8 @@ Store - take all things from single source of truth
 reducers - introduces functionality to incorporate changes in stores
 useSelector - select a value in store
 useDispatch - send a value in store
+
+
+Steps to configure RTK
+--> configureStore()
+--> createReducer()
