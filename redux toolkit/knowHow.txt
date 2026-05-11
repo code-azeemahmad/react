@@ -1,0 +1,23 @@
+         |----> React-dom
+React ---|
+         |----> React-native
+
+
+Redux (independent state management library)
+
+         |----> react-redux
+Redux ---|
+         
+
+// first of all
+Flux (architecture designed by facebook)
+Data flow
+
+redux is better version of Flux
+React dev meeting (you should never modify your state, changes should be made as pure functions)
+
+Concepts in Redux-Tookit
+Store - take all things from single source of truth
+reducers - introduces functionality to incorporate changes in stores
+useSelector - select a value in store
+useDispatch - send a value in store
